@@ -1,0 +1,22 @@
+[2025-01-30T14:43:11.846+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-30T14:43:11.879+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: http_dag.store_op scheduled__2025-01-29T00:00:00+00:00 [queued]>
+[2025-01-30T14:43:11.895+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: http_dag.store_op scheduled__2025-01-29T00:00:00+00:00 [queued]>
+[2025-01-30T14:43:11.897+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 1
+[2025-01-30T14:43:11.917+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): store_op> on 2025-01-29 00:00:00+00:00
+[2025-01-30T14:43:11.924+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=573) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-30T14:43:11.926+0000] {standard_task_runner.py:72} INFO - Started process 575 to run task
+[2025-01-30T14:43:11.928+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'http_dag', 'store_op', 'scheduled__2025-01-29T00:00:00+00:00', '--job-id', '49', '--raw', '--subdir', 'DAGS_FOLDER/http_dag.py', '--cfg-path', '/tmp/tmpm735z37f']
+[2025-01-30T14:43:11.932+0000] {standard_task_runner.py:105} INFO - Job 49: Subtask store_op
+[2025-01-30T14:43:12.193+0000] {task_command.py:467} INFO - Running <TaskInstance: http_dag.store_op scheduled__2025-01-29T00:00:00+00:00 [running]> on host a83ed179c59d
+[2025-01-30T14:43:12.294+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='http_dag' AIRFLOW_CTX_TASK_ID='store_op' AIRFLOW_CTX_EXECUTION_DATE='2025-01-29T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-29T00:00:00+00:00'
+[2025-01-30T14:43:12.295+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-30T14:43:12.308+0000] {postgres.py:204} INFO - Running copy expert: COPY starwars_character FROM stdin WITH DELIMITER as ',', filename: /tmp/starwars_character.csv
+[2025-01-30T14:43:12.319+0000] {base.py:84} INFO - Retrieving connection 'my_postgres_connection'
+[2025-01-30T14:43:12.329+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-30T14:43:12.347+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-30T14:43:12.348+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=http_dag, task_id=store_op, run_id=scheduled__2025-01-29T00:00:00+00:00, execution_date=20250129T000000, start_date=20250130T144311, end_date=20250130T144312
+[2025-01-30T14:43:12.436+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-30T14:43:12.476+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-30T14:43:12.481+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
